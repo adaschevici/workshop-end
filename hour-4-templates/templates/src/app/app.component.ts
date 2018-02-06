@@ -15,6 +15,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AppComponent implements OnInit {
   title: string;
+  isDisabled: boolean;
 
   constructor() {
     this.title = 'App Title';
