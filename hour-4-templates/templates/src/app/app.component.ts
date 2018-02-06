@@ -7,8 +7,10 @@ import { Component, OnInit } from '@angular/core';
     <div style="text-align:center">
       <h1>
         Welcome to {{title}}!
-        <button [disabled]="isDisabled">bigbutton</button>
       </h1>
+      <div>
+        <button [disabled]="isDisabled" (click)="clickFunction($event)">bigbutton</button>
+      </div>
     </div>
   `,
   styleUrls: ['./app.component.css']
@@ -19,13 +21,17 @@ export class AppComponent implements OnInit {
 
   constructor() {
     this.title = 'App Title';
-    this.isDisabled = false;
     console.log('Already instantiated the app');
   }
 
   ngOnInit() {
     console.log('Calling ng init');
+    this.isDisabled = false;
     this.title = 'Better App Title';
+  }
+
+  clickFunction() {
+    console.log('Called a click');
   }
 
 }
