@@ -7,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
     <div style="text-align:center">
       <h1>
         Welcome to {{title}}!
+        <button [disabled]="isDisabled">bigbutton</button>
       </h1>
     </div>
   `,
@@ -17,6 +18,7 @@ export class AppComponent implements OnInit {
 
   constructor() {
     this.title = 'App Title';
+    this.isDisabled = false;
     console.log('Already instantiated the app');
   }
 
