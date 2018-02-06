@@ -17,9 +17,11 @@ export class AppComponent implements OnInit {
 
   constructor() {
     this.title = 'App Title';
+    console.log('Already instantiated the app');
   }
 
   ngOnInit() {
+    console.log('Calling ng init');
     this.title = 'Better App Title';
   }
 
