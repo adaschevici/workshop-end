@@ -15,14 +15,17 @@ export class ProductListComponent implements OnInit {
       id: 1,
       productName: 'Apples',
       imageUrl: './assets/apple.png',
+      quantity: 14,
     }, {
       id: 2,
       productName: 'Oranges',
       imageUrl: './assets/orange.jpeg',
+      quantity: 14,
     }, {
       id: 3,
       productName: 'Ducks',
       imageUrl: './assets/ducks.jpeg',
+      quantity: 14,
     }];
   }
 

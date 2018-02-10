@@ -26,6 +26,15 @@
   border-radius: 50px;
 }
 
+.totals {
+  padding-bottom: 30px;
+}
+
+.total-label {
+  margin-left: 10px;
+  margin-top: 0px;
+}
+
 .label {
   margin-left: 20px;
 }

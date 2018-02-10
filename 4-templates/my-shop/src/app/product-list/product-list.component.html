@@ -5,7 +5,6 @@
     </div>
     <div class="label">
       {{ products[0].productName }}
-      {{ products[0].id + products[1].id }}
     </div>
   </div>
   <div class="listitem">
@@ -22,6 +21,14 @@
     </div>
     <div class="label">
       {{ products[2].productName }}
+    </div>
+  </div>
+  <div class="listitem">
+    <div class="totals">
+      <p class="total-label">Total items:</p>
+    </div>
+    <div class="label">
+      {{ products[0].quantity + products[1].quantity + products[2].quantity }}
     </div>
   </div>
 </div>
