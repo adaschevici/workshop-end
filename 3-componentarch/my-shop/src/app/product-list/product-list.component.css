@@ -1,0 +1,6 @@
+li {
+  border: 1px solid black;
+  list-style-position: inside;
+  margin-left: 25%;
+  width: 50%;
+}
