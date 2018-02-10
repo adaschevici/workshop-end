@@ -39,6 +39,11 @@ export class ProductListComponent implements OnInit {
     this.products[0].quantity = event.target.value;
   }
 
+  handleInput(event: any) {
+    console.log(event);
+    this.products[0].productName = event.target.value;
+  }
+
   ngOnInit() {
   }
 
