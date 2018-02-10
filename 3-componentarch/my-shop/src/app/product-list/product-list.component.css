@@ -1,6 +1,11 @@
 li {
-  border: 1px solid black;
+  border: 1px solid grey;
+  height: 30px;
+  padding-top: 7px;
+  background-color: #f6f8fa;
   list-style-position: inside;
-  margin-left: 25%;
-  width: 50%;
+  margin-left: 37.5%;
+  margin-bottom: 15px;
+  border-radius: 50px;
+  width: 25%;
 }
