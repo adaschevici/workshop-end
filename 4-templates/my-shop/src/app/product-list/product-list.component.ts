@@ -15,7 +15,7 @@ export class ProductListComponent implements OnInit {
       id: 1,
       productName: 'Apples',
       imageUrl: './assets/apple.png',
-      quantity: 14,
+      quantity: 4,
     }, {
       id: 2,
       productName: 'Oranges',
@@ -27,6 +27,10 @@ export class ProductListComponent implements OnInit {
       imageUrl: './assets/ducks.jpeg',
       quantity: 14,
     }];
+  }
+
+  isEnough(quantity) {
+    return quantity > 5 ? 'Enough' : 'Not Enough';
   }
 
   ngOnInit() {
