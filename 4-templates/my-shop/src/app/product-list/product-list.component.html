@@ -8,7 +8,10 @@
       {{ products[0].quantity }}
       {{ isEnough(products[0].quantity) }}
     </div>
-    <input [value]="products[0].quantity" />
+    <input
+      [value]="products[0].quantity"
+      (blur)="handleBlur($event)"
+    />
   </div>
   <div class="listitem">
     <div class="image">
