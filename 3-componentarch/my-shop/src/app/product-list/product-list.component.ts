@@ -1,5 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 
+interface Product {
+  productName: string;
+  imageUrl: string;
+}
+
 @Component({
   selector: 'app-product-list',
   templateUrl: './product-list.component.html',
@@ -7,10 +12,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ProductListComponent implements OnInit {
 
-  products: string[];
+  products: Product[];
 
   constructor() {
-    this.products = ['Apples', 'Oranges', 'Ducks'];
+    this.products = [{
+      productName: 'Apples',
+      imageUrl: './assets/apple.png',
+    }, {
+      productName: 'Oranges',
+      imageUrl: './assets/orange.jpeg',
+    }, {
+      productName: 'Ducks',
+      imageUrl: './assets/ducks.jpeg',
+    }];
   }
 
   ngOnInit() {
