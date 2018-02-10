@@ -1,9 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
-interface Product {
-  productName: string;
-  imageUrl: string;
-}
+import { Product } from './models/product.interface';
 
 @Component({
   selector: 'app-product-list',
