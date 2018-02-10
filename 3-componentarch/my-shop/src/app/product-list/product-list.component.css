@@ -1,8 +1,4 @@
-ul {
-  list-style: none;
-}
-
-li {
+.listitem {
   border: 1px solid grey;
   height: 30px;
   padding-top: 7px;
@@ -14,6 +10,10 @@ li {
   width: 25%;
 }
 
-li:hover {
+.listitem:hover {
   background-color: #badbfc;
+}
+
+.image {
+  border: 1px solid grey;
 }
