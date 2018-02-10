@@ -1,0 +1,31 @@
+.listitem {
+  border: 1px solid grey;
+  height: 30px;
+  padding-top: 10px;
+  display: flex;
+  background-color: #f6f8fa;
+  list-style-position: inside;
+  margin-left: 37.5%;
+  margin-bottom: 15px;
+  border-radius: 50px;
+  width: 25%;
+}
+
+.listitem:hover {
+  background-color: #badbfc;
+}
+
+.image {
+  width: 30px;
+  margin-left: 10px;
+  margin-bottom: 7px;
+}
+
+.sizedimage {
+  height: 20px;
+  border-radius: 50px;
+}
+
+.label {
+  margin-left: 20px;
+}
