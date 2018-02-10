@@ -1,3 +1,7 @@
+ul {
+  list-style: none;
+}
+
 li {
   border: 1px solid grey;
   height: 30px;
@@ -8,4 +12,8 @@ li {
   margin-bottom: 15px;
   border-radius: 50px;
   width: 25%;
+}
+
+li:hover {
+  background-color: #badbfc;
 }
