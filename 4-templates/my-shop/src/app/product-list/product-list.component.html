@@ -1,8 +1,9 @@
 <div>
   <div class="listitem">
-    <div class="image">
-      <img src="{{ products[0].imageUrl }}" class="sizedimage" />
-    </div>
+    <button
+       (click)="handleClick($event)"
+    >Click me
+    </button>
     <div class="label">
       {{ products[0].productName }}
       {{ products[0].quantity }}

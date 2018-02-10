@@ -44,6 +44,10 @@ export class ProductListComponent implements OnInit {
     this.products[0].productName = event.target.value;
   }
 
+  handleClick(event: any) {
+    console.log(event);
+  }
+
   ngOnInit() {
   }
 
