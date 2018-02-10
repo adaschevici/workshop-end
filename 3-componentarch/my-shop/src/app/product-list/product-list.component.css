@@ -1,7 +1,8 @@
 .listitem {
   border: 1px solid grey;
   height: 30px;
-  padding-top: 7px;
+  padding-top: 10px;
+  display: flex;
   background-color: #f6f8fa;
   list-style-position: inside;
   margin-left: 37.5%;
@@ -16,4 +17,11 @@
 
 .image {
   border: 1px solid grey;
+  width: 30px;
+  margin-left: 10px;
+  margin-bottom: 7px;
+}
+
+.label {
+  margin-left: 20px;
 }
