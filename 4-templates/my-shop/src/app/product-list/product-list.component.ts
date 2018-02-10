@@ -12,12 +12,15 @@ export class ProductListComponent implements OnInit {
 
   constructor() {
     this.products = [{
+      id: 1,
       productName: 'Apples',
       imageUrl: './assets/apple.png',
     }, {
+      id: 2,
       productName: 'Oranges',
       imageUrl: './assets/orange.jpeg',
     }, {
+      id: 3,
       productName: 'Ducks',
       imageUrl: './assets/ducks.jpeg',
     }];
