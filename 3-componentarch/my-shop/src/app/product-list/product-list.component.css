@@ -16,10 +16,14 @@
 }
 
 .image {
-  border: 1px solid grey;
   width: 30px;
   margin-left: 10px;
   margin-bottom: 7px;
+}
+
+.sizedimage {
+  height: 20px;
+  border-radius: 50px;
 }
 
 .label {
