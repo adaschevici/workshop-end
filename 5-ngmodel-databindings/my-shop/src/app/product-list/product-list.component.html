@@ -1,0 +1,26 @@
+<div>
+  <div class="listitem">
+    <button
+       (click)="handleClick($event)"
+    >Click me
+    </button>
+    <div class="label">
+      {{ products[0].productName }}
+      {{ products[0].quantity }}
+      {{ isEnough(products[0].quantity) }}
+    </div>
+    <input
+      [value]="products[0].quantity"
+      (blur)="handleBlur($event)"
+      (input)="handleInput($event)"
+    />
+  </div>
+  <div class="listitem">
+    <div class="totals">
+      <p class="total-label">Total items:</p>
+    </div>
+    <div class="label">
+      {{ products[0].quantity + products[1].quantity + products[2].quantity }}
+    </div>
+  </div>
+</div>
