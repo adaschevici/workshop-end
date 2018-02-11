@@ -33,15 +33,9 @@ export class ProductListComponent implements OnInit {
     return quantity > 5 ? 'Enough' : 'Not Enough';
   }
 
-  handleBlur(event: any) {
-    console.log(event);
-    console.log(this.products[0].quantity);
-    this.products[0].quantity = event.target.value;
-  }
-
-  handleInput(event: any) {
-    console.log(event);
-    this.products[0].productName = event.target.value;
+  handleChange(value: string) {
+    console.log(value);
+    this.products[0].productName = value;
   }
 
   handleClick(event: any) {

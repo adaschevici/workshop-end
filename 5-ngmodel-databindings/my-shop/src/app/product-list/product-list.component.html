@@ -10,9 +10,9 @@
       {{ isEnough(products[0].quantity) }}
     </div>
     <input
-      [value]="products[0].quantity"
-      (blur)="handleBlur($event)"
-      (input)="handleInput($event)"
+      type="text"
+      [ngModel]="products[0].quantity"
+      (ngModelChange)="handleChange($event)"
     />
   </div>
   <div class="listitem">
