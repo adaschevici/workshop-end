@@ -69,6 +69,12 @@ export class ProductListComponent implements OnInit {
 
   handleEdit(event: Product) {
     console.log(event);
+    this.products = this.products.map((product: Product) => {
+      if (product.id === event.id) {
+        product = Object.assign({}, product, event);
+      };
+      return product;
+    });
   }
 
 }
