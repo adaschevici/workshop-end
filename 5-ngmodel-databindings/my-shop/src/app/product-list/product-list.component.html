@@ -14,6 +14,10 @@
       [ngModel]="products[0].quantity"
       (ngModelChange)="handleChange($event)"
     />
+    <input
+      type="text"
+      [(ngModel)]="products[0].quantity"
+    />
   </div>
   <div class="listitem">
     <div class="totals">
