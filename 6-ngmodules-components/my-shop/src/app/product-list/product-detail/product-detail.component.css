@@ -1,7 +1,7 @@
 .listitem {
+  display: flex;
   padding-top: 10px;
   padding-left: 10px;
-  display: flex;
   list-style-position: inside;
   margin-left: 7.5%;
   margin-bottom: 15px;
@@ -9,6 +9,11 @@
   width: 40%;
 }
 
+
+.product-name {
+  padding-top: 3px;
+  width: 150px;
+}
 .stock {
   width: 10px;
   height: 10px;

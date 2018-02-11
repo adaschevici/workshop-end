@@ -4,7 +4,7 @@
     [ngStyle]="{ backgroundColor: (detail.inStock ? '#2ecc71' : '#c0392b') }"
   >
   </span>
-  <div *ngIf="editing">
+  <div class="product-name" *ngIf="editing">
     <input
       type="text"
       [value]="detail.name"
@@ -12,7 +12,7 @@
       #name
     />
   </div>
-  <div *ngIf="!editing">
+  <div class="product-name" *ngIf="!editing">
     {{ detail.name }}
   </div>
   <button (click)="toggleEdit()">
