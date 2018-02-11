@@ -16,6 +16,6 @@
     {{ detail.name }}
   </div>
   <button (click)="toggleEdit()">
-    Edit
+    {{ editing ? 'Done' : 'Edit' }}
   </button>
 </div>
