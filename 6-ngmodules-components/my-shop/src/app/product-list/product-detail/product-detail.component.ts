@@ -28,6 +28,10 @@ export class ProductDetailComponent implements OnInit, OnChanges {
     }
   }
 
+  onNameChange(value: string) {
+    this.detail.name = value;
+  }
+
   ngOnInit() {
     console.log(this.detail);
   }

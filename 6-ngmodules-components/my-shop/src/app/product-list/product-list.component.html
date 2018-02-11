@@ -1,4 +1,7 @@
 <div>
+  <div *ngFor="let product of products;">
+    {{ product.name }}
+  </div>
   <app-product-count
     [items]="products"
   ></app-product-count>
