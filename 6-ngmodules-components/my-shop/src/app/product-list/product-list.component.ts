@@ -52,8 +52,8 @@ export class ProductListComponent implements OnInit {
       inStock: false,
     }, {
       id: 5,
-      name: 'Pandas',
-      imageUrl: './assets/panda.jpg',
+      name: 'Tweeties',
+      imageUrl: './assets/tweety.png',
       quantity: 2,
       inStock: true,
       lastRenewed: 1518179401000,

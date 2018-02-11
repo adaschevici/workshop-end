@@ -38,13 +38,13 @@ export class ProductListComponent implements OnInit {
     }, {
       id: 4,
       name: 'Kittens',
-      imageUrl: './assets/kittne.jpg',
+      imageUrl: './assets/kitten.jpg',
       quantity: 0,
       inStock: false,
     }, {
       id: 5,
-      name: 'Pandas',
-      imageUrl: './assets/panda.jpg',
+      name: 'Tweeties',
+      imageUrl: './assets/tweety.png',
       quantity: 2,
       inStock: true,
       lastRenewed: 1518179401000,
