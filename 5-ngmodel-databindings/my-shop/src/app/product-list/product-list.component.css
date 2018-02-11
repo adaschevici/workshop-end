@@ -1,11 +1,7 @@
 .listitem {
-  border: 1px solid grey;
-  height: 70px;
   padding-top: 10px;
-  padding-bottom: 10px;
   padding-left: 10px;
   display: flex;
-  background-color: #f6f8fa;
   list-style-position: inside;
   margin-left: 37.5%;
   margin-bottom: 15px;
@@ -13,31 +9,16 @@
   width: 40%;
 }
 
-.listitem:hover {
-  background-color: #badbfc;
+.stock {
+  width: 10px;
+  height: 10px;
+  background: #c0392b;
+  display: block;
+  margin: 8px 10px 0 0;
+  float: left;
+  border-radius: 50%;
 }
 
-.image {
-  width: 30px;
-  margin-left: 10px;
-  margin-bottom: 7px;
-}
-
-.sizedimage {
-  height: 20px;
-  border-radius: 50px;
-}
-
-.totals {
-  padding-bottom: 30px;
-}
-
-.total-label {
-  margin-left: 10px;
-  margin-top: 0px;
-}
-
-.label {
-  margin-left: 20px;
-  margin-top: 12px;
+.stock.in {
+  background: #2ecc71;
 }
