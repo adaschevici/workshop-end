@@ -1,0 +1,19 @@
+<div>
+  <input
+    type="text"
+    [value]="product"
+    (input)="handleChange($event.target.value)"
+  />
+  <div *ngIf="product.length > 2">
+    Searching for... {{ product }} in {{ products.length }} products
+  </div>
+  <h1> Products styled with ngStyle</h1>
+  <div class="listitem" *ngFor="let product of products; let i = index;">
+    <span
+      class="stock"
+      [ngStyle]="{ backgroundColor: (product.inStock ? '#2ecc71' : '#c0392b') }"
+    >
+    </span>
+      {{ i }}: {{ product.name | uppercase }} {{ product.lastRenewed ? "Last Restock" : "" }} {{ product.lastRenewed | date: 'yyyy MMM dd' }}
+  </div>
+</div>
