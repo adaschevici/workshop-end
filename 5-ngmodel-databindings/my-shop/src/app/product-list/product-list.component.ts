@@ -28,7 +28,6 @@ export class ProductListComponent implements OnInit {
       imageUrl: './assets/orange.jpeg',
       quantity: 14,
       inStock: true,
-      lastRenewed: 1516364838000,
     }, {
       id: 3,
       name: 'Ducks',
@@ -42,7 +41,6 @@ export class ProductListComponent implements OnInit {
       imageUrl: './assets/kittne.jpg',
       quantity: 0,
       inStock: false,
-      lastRenewed: 1517920231000,
     }, {
       id: 5,
       name: 'Pandas',

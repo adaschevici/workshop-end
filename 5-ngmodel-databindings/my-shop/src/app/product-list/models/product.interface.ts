@@ -4,6 +4,6 @@ export interface Product {
   imageUrl: string;
   quantity: number;
   inStock: boolean;
-  lastRenewed: number;
+  lastRenewed?: number;
 }
 
