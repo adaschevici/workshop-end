@@ -20,6 +20,7 @@ export class ProductDetailComponent implements OnInit {
 
   onNameChange(value: string) {
     console.log('Value: ', value);
+    this.detail.name = value;
   }
 
   toggleEdit() {
