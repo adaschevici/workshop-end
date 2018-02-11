@@ -10,9 +10,7 @@ import { Product } from '../models/product.interface';
 export class ProductDetailComponent implements OnInit {
   @Input()
   detail: Product;
-
-  @Input()
-  idx: number;
+  editing: boolean = false;
 
   constructor() { }
 
@@ -20,4 +18,11 @@ export class ProductDetailComponent implements OnInit {
     console.log(this.detail);
   }
 
+  onNameChange(value: string) {
+    console.log('Value: ', value);
+  }
+
+  toggleEdit() {
+    this.editing = !this.editing;
+  }
 }

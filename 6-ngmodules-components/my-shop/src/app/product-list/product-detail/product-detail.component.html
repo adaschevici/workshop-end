@@ -4,5 +4,18 @@
     [ngStyle]="{ backgroundColor: (detail.inStock ? '#2ecc71' : '#c0392b') }"
   >
   </span>
-  {{ idx }}: {{ detail.name | uppercase }} {{ detail.lastRenewed ? "Last Restock" : "" }} {{ detail.lastRenewed | date: 'yyyy MMM dd' }}
+  <div *ngIf="editing">
+    <input
+      type="text"
+      [value]="detail.name"
+      (input)="onNameChange(name.value)"
+      #name
+    />
+  </div>
+  <div *ngIf="!editing">
+    {{ detail.name }}
+  </div>
+  <button (click)="toggleEdit()">
+    Edit
+  </button>
 </div>

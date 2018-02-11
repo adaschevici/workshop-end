@@ -3,8 +3,7 @@
     [items]="products"
   ></app-product-count>
   <app-product-detail
-    *ngFor="let product of products; let i = index"
+    *ngFor="let product of products;"
     [detail]="product"
-    [idx]="i"
   ></app-product-detail>
 </div>
