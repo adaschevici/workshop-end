@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Product } from './models/product.interface';
 
+import uppercase from '../../utils/filters';
+
 @Component({
   selector: 'app-product-list',
   templateUrl: './product-list.component.html',
