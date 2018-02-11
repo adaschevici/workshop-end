@@ -15,19 +15,34 @@ export class ProductListComponent implements OnInit {
     this.product = '';
     this.products = [{
       id: 1,
-      productName: 'Apples',
+      name: 'Apples',
       imageUrl: './assets/apple.png',
       quantity: 4,
+      inStock: true,
     }, {
       id: 2,
-      productName: 'Oranges',
+      name: 'Oranges',
       imageUrl: './assets/orange.jpeg',
       quantity: 14,
+      inStock: true,
     }, {
       id: 3,
-      productName: 'Ducks',
+      name: 'Ducks',
       imageUrl: './assets/ducks.jpeg',
       quantity: 14,
+      inStock: true,
+    }, {
+      id: 4,
+      name: 'Kittens',
+      imageUrl: './assets/kittne.jpg',
+      quantity: 0,
+      inStock: false,
+    }, {
+      id: 5,
+      name: 'Pandas',
+      imageUrl: './assets/panda.jpg',
+      quantity: 2,
+      inStock: true,
     }];
   }
 

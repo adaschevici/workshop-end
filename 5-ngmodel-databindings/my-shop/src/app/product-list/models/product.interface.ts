@@ -1,7 +1,8 @@
 export interface Product {
   id: number;
-  productName: string;
+  name: string;
   imageUrl: string;
   quantity: number;
+  inStock: boolean;
 }
 
