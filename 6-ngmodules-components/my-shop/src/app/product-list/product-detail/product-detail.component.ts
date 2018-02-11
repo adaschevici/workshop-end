@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 
 import { Product } from '../models/product.interface';
 
@@ -10,6 +10,10 @@ import { Product } from '../models/product.interface';
 export class ProductDetailComponent implements OnInit {
   @Input()
   detail: Product;
+
+  @Output()
+  remove2: EventEmitter<any> = new EventEmitter();
+
   editing: boolean = false;
 
   constructor() { }
@@ -25,5 +29,9 @@ export class ProductDetailComponent implements OnInit {
 
   toggleEdit() {
     this.editing = !this.editing;
+  }
+
+  onRemove() {
+    this.remove2.emit(this.detail);
   }
 }

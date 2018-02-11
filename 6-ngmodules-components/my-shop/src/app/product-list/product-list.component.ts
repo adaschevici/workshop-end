@@ -60,4 +60,8 @@ export class ProductListComponent implements OnInit {
     }];
   }
 
+  handleRemove(event: any) {
+    console.log(event);
+  }
+
 }
