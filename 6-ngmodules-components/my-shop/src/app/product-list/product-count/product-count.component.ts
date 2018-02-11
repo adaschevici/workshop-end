@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 import { Product } from '../models/product.interface';
 
@@ -8,6 +8,7 @@ import { Product } from '../models/product.interface';
   styleUrls: ['./product-count.component.css']
 })
 export class ProductCountComponent implements OnInit {
+  @Input()
   items: Product[];
 
   constructor() { }
