@@ -13,7 +13,16 @@ export class ProductListComponent implements OnInit {
   products: Product[];
   product: string;
 
-  constructor() {
+  handleChange(value: string) {
+    console.log(value);
+    this.product = value;
+  }
+
+  handleClick(event: any) {
+    console.log(event);
+  }
+
+  ngOnInit() {
     this.product = '';
     this.products = [{
       id: 1,
@@ -49,18 +58,6 @@ export class ProductListComponent implements OnInit {
       inStock: true,
       lastRenewed: 1518179401000,
     }];
-  }
-
-  handleChange(value: string) {
-    console.log(value);
-    this.product = value;
-  }
-
-  handleClick(event: any) {
-    console.log(event);
-  }
-
-  ngOnInit() {
   }
 
 }
