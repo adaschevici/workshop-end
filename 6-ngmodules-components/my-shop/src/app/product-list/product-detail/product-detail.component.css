@@ -1,0 +1,27 @@
+.listitem {
+  padding-top: 10px;
+  padding-left: 10px;
+  display: flex;
+  list-style-position: inside;
+  margin-left: 37.5%;
+  margin-bottom: 15px;
+  border-radius: 50px;
+  width: 40%;
+}
+
+.stock {
+  width: 10px;
+  height: 10px;
+  display: block;
+  margin: 8px 10px 0 0;
+  float: left;
+  border-radius: 50%;
+}
+
+.stock.out {
+  background: #c0392b;
+}
+
+.stock.in {
+  background: #2ecc71;
+}

@@ -1,3 +1,8 @@
-<p>
-  product-detail works!
-</p>
+<div class="listitem">
+  <span
+    class="stock"
+    [ngStyle]="{ backgroundColor: (detail.inStock ? '#2ecc71' : '#c0392b') }"
+  >
+  </span>
+  {{ idx }}: {{ detail.name | uppercase }} {{ detail.lastRenewed ? "Last Restock" : "" }} {{ detail.lastRenewed | date: 'yyyy MMM dd' }}
+</div>
