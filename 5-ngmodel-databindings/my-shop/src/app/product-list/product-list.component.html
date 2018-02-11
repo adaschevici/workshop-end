@@ -29,4 +29,22 @@
     </span>
     {{ i }}: {{ product.name }}
   </div>
+  <h1> Products styled with style bindings</h1>
+  <div class="listitem" *ngFor="let product of products; let i = index;">
+    <span
+      class="stock"
+      [style.backgroundColor]="(product.inStock ? '#2ecc71' : '#c0392b')"
+    >
+    </span>
+    {{ i }}: {{ product.name }}
+  </div>
+  <h1> Products styled with ngStyle</h1>
+  <div class="listitem" *ngFor="let product of products; let i = index;">
+    <span
+      class="stock"
+      [ngStyle]="{ backgroundColor: (product.inStock ? '#2ecc71' : '#c0392b') }"
+    >
+    </span>
+    {{ i }}: {{ product.name }}
+  </div>
 </div>
