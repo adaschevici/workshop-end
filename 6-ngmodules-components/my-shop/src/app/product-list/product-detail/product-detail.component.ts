@@ -1,4 +1,4 @@
-import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter, OnChanges } from '@angular/core';
 
 import { Product } from '../models/product.interface';
 
@@ -7,7 +7,7 @@ import { Product } from '../models/product.interface';
   templateUrl: './product-detail.component.html',
   styleUrls: ['./product-detail.component.css']
 })
-export class ProductDetailComponent implements OnInit {
+export class ProductDetailComponent implements OnInit, OnChanges {
   @Input()
   detail: Product;
 
@@ -21,13 +21,15 @@ export class ProductDetailComponent implements OnInit {
 
   constructor() { }
 
-  ngOnInit() {
-    console.log(this.detail);
+  ngOnChanges(changes) {
+    console.log(changes);
+    if (changes.detail) {
+      this.detail = Object.assign({}, changes.detail.currentValue);
+    }
   }
 
-  onNameChange(value: string) {
-    console.log('Value: ', value);
-    this.detail.name = value;
+  ngOnInit() {
+    console.log(this.detail);
   }
 
   toggleEdit() {
