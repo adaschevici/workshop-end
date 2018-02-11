@@ -12,6 +12,7 @@
     <span
       class="stock"
       [class.in]="product.inStock"
+      [class.out]="!product.inStock"
     >
     </span>
     {{ i }}: {{ product.name }}
