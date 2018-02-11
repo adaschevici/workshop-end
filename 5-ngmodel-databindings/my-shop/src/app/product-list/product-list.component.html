@@ -14,6 +14,6 @@
       [ngStyle]="{ backgroundColor: (product.inStock ? '#2ecc71' : '#c0392b') }"
     >
     </span>
-    {{ i }}: {{ product.name | uppercase }}
+      {{ i }}: {{ product.name | uppercase }} Last Restock {{ product.lastRenewed | date: 'yyyy MMM dd' }}
   </div>
 </div>

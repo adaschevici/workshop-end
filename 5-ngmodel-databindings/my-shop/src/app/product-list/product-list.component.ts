@@ -21,35 +21,35 @@ export class ProductListComponent implements OnInit {
       imageUrl: './assets/apple.png',
       quantity: 4,
       inStock: true,
-      lastRenewed: 1518092805,
+      lastRenewed: 1518092805000,
     }, {
       id: 2,
       name: 'Oranges',
       imageUrl: './assets/orange.jpeg',
       quantity: 14,
       inStock: true,
-      lastRenewed: 1516364838,
+      lastRenewed: 1516364838000,
     }, {
       id: 3,
       name: 'Ducks',
       imageUrl: './assets/ducks.jpeg',
       quantity: 14,
       inStock: true,
-      lastRenewed: 1517142561,
+      lastRenewed: 1517142561000,
     }, {
       id: 4,
       name: 'Kittens',
       imageUrl: './assets/kittne.jpg',
       quantity: 0,
       inStock: false,
-      lastRenewed: 1517920231,
+      lastRenewed: 1517920231000,
     }, {
       id: 5,
       name: 'Pandas',
       imageUrl: './assets/panda.jpg',
       quantity: 2,
       inStock: true,
-      lastRenewed: 1518179401,
+      lastRenewed: 1518179401000,
     }];
   }
 
