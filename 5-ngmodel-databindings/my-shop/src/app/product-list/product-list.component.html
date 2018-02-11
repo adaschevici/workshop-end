@@ -1,22 +1,15 @@
 <div>
   <div class="listitem">
     <button
-       (click)="handleClick($event)"
+       (click)="handleClick(username.value)"
     >Click me
     </button>
     <div class="label">
       {{ products[0].productName }}
-      {{ products[0].quantity }}
-      {{ isEnough(products[0].quantity) }}
     </div>
     <input
       type="text"
-      [ngModel]="products[0].productName"
-      (ngModelChange)="handleChange($event)"
-    />
-    <input
-      type="text"
-      [(ngModel)]="products[0].productName"
+      #username
     />
   </div>
   <div class="listitem">
