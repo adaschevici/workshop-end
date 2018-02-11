@@ -5,6 +5,7 @@
   <app-product-detail
     *ngFor="let product of products;"
     [detail]="product"
-    (remove2)="handleRemove($event)"
+    (edit)="handleEdit($event)"
+    (remove)="handleRemove($event)"
   ></app-product-detail>
 </div>

@@ -12,7 +12,10 @@ export class ProductDetailComponent implements OnInit {
   detail: Product;
 
   @Output()
-  remove2: EventEmitter<any> = new EventEmitter();
+  remove: EventEmitter<any> = new EventEmitter();
+
+  @Output()
+  edit: EventEmitter<any> = new EventEmitter();
 
   editing: boolean = false;
 
@@ -28,10 +31,13 @@ export class ProductDetailComponent implements OnInit {
   }
 
   toggleEdit() {
+    if (this.editing) {
+      this.edit.emit(this.detail);
+    }
     this.editing = !this.editing;
   }
 
   onRemove() {
-    this.remove2.emit(this.detail);
+    this.remove.emit(this.detail);
   }
 }

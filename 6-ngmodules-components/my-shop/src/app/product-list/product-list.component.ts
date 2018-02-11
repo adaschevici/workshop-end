@@ -64,4 +64,8 @@ export class ProductListComponent implements OnInit {
     console.log(event);
   }
 
+  handleEdit(event: any) {
+    console.log(event);
+  }
+
 }
