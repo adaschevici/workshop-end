@@ -1,23 +1,10 @@
 <div>
-  <div class="listitem">
-    <button
-       (click)="handleClick(username.value)"
-    >Click me
-    </button>
-    <div class="label">
-      {{ products[0].productName }}
-    </div>
-    <input
-      type="text"
-      #username
-    />
-  </div>
-  <div class="listitem">
-    <div class="totals">
-      <p class="total-label">Total items:</p>
-    </div>
-    <div class="label">
-      {{ products[0].quantity + products[1].quantity + products[2].quantity }}
-    </div>
+  <input
+    type="text"
+    [value]="product"
+    (input)="handleChange($event.target.value)"
+  />
+  <div *ngIf="product?.length">
+    Searching for... {{ product }}
   </div>
 </div>

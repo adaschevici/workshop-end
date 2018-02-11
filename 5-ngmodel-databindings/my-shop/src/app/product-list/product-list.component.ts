@@ -9,8 +9,10 @@ import { Product } from './models/product.interface';
 export class ProductListComponent implements OnInit {
 
   products: Product[];
+  product: string;
 
   constructor() {
+    this.product = '';
     this.products = [{
       id: 1,
       productName: 'Apples',
@@ -29,13 +31,9 @@ export class ProductListComponent implements OnInit {
     }];
   }
 
-  isEnough(quantity) {
-    return quantity > 5 ? 'Enough' : 'Not Enough';
-  }
-
   handleChange(value: string) {
     console.log(value);
-    this.products[0].productName = value;
+    this.product = value;
   }
 
   handleClick(event: any) {
