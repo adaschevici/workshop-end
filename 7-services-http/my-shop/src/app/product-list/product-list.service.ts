@@ -1,45 +1,24 @@
+import { Http, Response } from '@angular/http';
+
 import { Injectable } from '@angular/core';
+import { Observable } from 'rxjs/Observable';
+import 'rxjs/add/operator/map';
+
+import { Product } from './models/product.interface';
+
+const PRODUCT_API: string = '/api';
 
 @Injectable()
 export class ProductListService {
 
-  constructor() { }
+  constructor(private http: Http) {
+    console.log(this.http);
+  }
 
-  getProducts() {
-    return [{
-      id: 1,
-      name: 'Apples',
-      imageUrl: './assets/apple.png',
-      quantity: 4,
-      inStock: true,
-      lastRenewed: 1518092805000,
-    }, {
-      id: 2,
-      name: 'Oranges',
-      imageUrl: './assets/orange.jpeg',
-      quantity: 14,
-      inStock: true,
-    }, {
-      id: 3,
-      name: 'Ducks',
-      imageUrl: './assets/ducks.jpeg',
-      quantity: 14,
-      inStock: true,
-      lastRenewed: 1517142561000,
-    }, {
-      id: 4,
-      name: 'Kittens',
-      imageUrl: './assets/kitten.jpg',
-      quantity: 0,
-      inStock: false,
-    }, {
-      id: 5,
-      name: 'Tweeties',
-      imageUrl: './assets/tweety.png',
-      quantity: 2,
-      inStock: true,
-      lastRenewed: 1518179401000,
-    }];
+  getProducts(): Observable<Product[]> {
+    return this.http
+      .get(PRODUCT_API)
+      .map((response: Response) => response.json());
   }
 
 }

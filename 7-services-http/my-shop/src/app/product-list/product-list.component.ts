@@ -29,7 +29,12 @@ export class ProductListComponent implements OnInit {
 
   ngOnInit() {
     this.product = '';
-    this.products = this.productService.getProducts();
+    this.productService
+      .getProducts()
+      .subscribe((data: Product[]) => {
+        console.log(data);
+        this.products = data;
+      });
   }
 
   handleRemove(event: any) {
