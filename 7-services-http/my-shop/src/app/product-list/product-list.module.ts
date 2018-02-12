@@ -7,6 +7,7 @@ import { ProductListComponent } from './product-list.component';
 import { ProductDetailComponent } from './product-detail/product-detail.component';
 import { ProductCountComponent } from './product-count/product-count.component';
 
+import { ProductListService } from './product-list.service';
 
 @NgModule({
   declarations: [
@@ -20,6 +21,9 @@ import { ProductCountComponent } from './product-count/product-count.component';
   ],
   exports: [
     ProductListComponent,
+  ],
+  providers: [
+    ProductListService,
   ],
 })
 export class ProductListModule { }
