@@ -21,4 +21,9 @@ export class ProductListService {
       .map((response: Response) => response.json());
   }
 
+  updateProduct(product: Product): Observable<Product> {
+    return this.http
+    .put(`${PRODUCT_API}/${product.id}`, product)
+      .map((response: Response) => response.json());
+  }
 }
