@@ -3,6 +3,7 @@ import { Http, Response, Headers, RequestOptions } from '@angular/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs/Observable';
 import 'rxjs/add/operator/map';
+import 'rxjs/add/operator/toPromise';
 
 import { Product } from './models/product.interface';
 
@@ -15,10 +16,11 @@ export class ProductListService {
     console.log(this.http);
   }
 
-  getProducts(): Observable<Product[]> {
+  getProducts(): Promise<Product[]> {
     return this.http
       .get(PRODUCT_API)
-      .map((response: Response) => response.json());
+      .toPromise()
+      .then((response: Response) => response.json());
   }
 
   updateProduct(product: Product): Observable<Product> {
