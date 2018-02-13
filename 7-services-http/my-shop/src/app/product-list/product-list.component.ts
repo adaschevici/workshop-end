@@ -63,4 +63,12 @@ export class ProductListComponent implements OnInit {
       });
   }
 
+  handleBTCFetch(event: any) {
+    this.productService
+      .getCoinsData(event)
+      .subscribe((data: any) => {
+        console.log(data);
+      });
+  }
+
 }

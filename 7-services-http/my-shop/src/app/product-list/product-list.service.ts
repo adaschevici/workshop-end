@@ -1,4 +1,4 @@
-import { Http, Response } from '@angular/http';
+import { Http, Response, Headers, RequestOptions } from '@angular/http';
 
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs/Observable';
@@ -32,4 +32,16 @@ export class ProductListService {
       .delete(`${PRODUCT_API}/${product.id}`)
       .map((response: Response) => response.json());
   }
+
+  getCoinsData(): Observable<any> {
+    let headers = new Headers({
+      'Content-Type': 'application/json',
+      'X-CoinAPI-Key': '<some_free_api_key',
+    });
+    let options = new RequestOptions({
+      headers: headers,
+    });
+    return this.http
+      .get('https://rest.coinapi.io/v1/exchangerate/BTC', options)
+      .map((response: Response) => response.json());
 }
