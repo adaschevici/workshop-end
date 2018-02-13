@@ -68,7 +68,7 @@ export class ProductListComponent implements OnInit {
       .getCoinsData(event)
       .subscribe((data: any) => {
         console.log(data);
-      });
+        }, (error: any) => console.log('*****', error));
   }
 
 }
