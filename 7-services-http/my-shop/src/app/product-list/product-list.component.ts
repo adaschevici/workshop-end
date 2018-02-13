@@ -39,9 +39,13 @@ export class ProductListComponent implements OnInit {
 
   handleRemove(event: any) {
     console.log(event);
-    this.products = this.products.filter((product: Product) => {
-      return product.id !== event.id;
-    });
+    this.productService
+      .removeProduct(event)
+      .subscribe((data: Product) => {
+        this.products = this.products.filter((product: Product) => {
+          return product.id !== event.id;
+        });
+      });
   }
 
   handleEdit(event: Product) {

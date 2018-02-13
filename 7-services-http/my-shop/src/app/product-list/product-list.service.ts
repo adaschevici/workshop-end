@@ -23,7 +23,13 @@ export class ProductListService {
 
   updateProduct(product: Product): Observable<Product> {
     return this.http
-    .put(`${PRODUCT_API}/${product.id}`, product)
+      .put(`${PRODUCT_API}/${product.id}`, product)
+      .map((response: Response) => response.json());
+  }
+
+  removeProduct(product: Product): Observable<Product> {
+    return this.http
+      .delete(`${PRODUCT_API}/${product.id}`)
       .map((response: Response) => response.json());
   }
 }
