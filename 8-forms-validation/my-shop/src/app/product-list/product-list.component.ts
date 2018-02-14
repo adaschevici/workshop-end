@@ -65,10 +65,10 @@ export class ProductListComponent implements OnInit {
 
   handleBTCFetch(event: any) {
     this.productService
-      .getCoinsData(event)
+      .getCoinsData()
       .subscribe((data: any) => {
         console.log(data);
-        }, (error: any) => console.log('*****', error));
+      }, (error: any) => console.log('*****', error));
   }
 
 }
