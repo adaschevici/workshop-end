@@ -1,0 +1,18 @@
+<div>
+  <div *ngFor="let product of products;">
+    {{ product.name }}
+  </div>
+  <app-product-count
+    [items]="products"
+  ></app-product-count>
+  <app-product-detail
+    *ngFor="let product of products;"
+    [detail]="product"
+    (edit)="handleEdit($event)"
+    (remove)="handleRemove($event)"
+  ></app-product-detail>
+  <button
+    (click)="handleBTCFetch($event)"
+  >Fetch btcs
+  </button>
+</div>
