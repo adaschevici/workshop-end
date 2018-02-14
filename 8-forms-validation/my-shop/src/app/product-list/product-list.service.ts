@@ -49,4 +49,5 @@ export class ProductListService {
       .get('https://rest.coinapi.io/v1/exchangerate/BTC', options)
       .map((response: Response) => response.json())
       .catch((error: any) => Observable.throw(error.json()));
+  }
 }
