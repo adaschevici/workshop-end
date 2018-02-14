@@ -4,11 +4,11 @@ import { HttpModule } from '@angular/http';
 import { FormsModule } from '@angular/forms';
 
 
-import { ProductListComponent } from './product-list.component';
-import { ProductViewerComponent } from '../product-viewer/product-viewer.component';
+import { ProductListComponent } from './containers/product-list/product-list.component';
+import { ProductViewerComponent } from './containers/product-viewer/product-viewer.component';
 
-import { ProductDetailComponent } from './product-detail/product-detail.component';
-import { ProductCountComponent } from './product-count/product-count.component';
+import { ProductDetailComponent } from './components/product-detail/product-detail.component';
+import { ProductCountComponent } from './components/product-count/product-count.component';
 
 import { ProductListService } from './product-list.service';
 
@@ -25,8 +25,7 @@ import { ProductListService } from './product-list.service';
     FormsModule,
   ],
   exports: [
-  // ProductListComponent,
-    ProductViewerComponent,
+    ProductListComponent,
   ],
   providers: [
     ProductListService,
