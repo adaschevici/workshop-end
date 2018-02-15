@@ -25,7 +25,8 @@ import { ProductListService } from './product-list.service';
     FormsModule,
   ],
   exports: [
-    ProductListComponent,
+  // ProductListComponent,
+    ProductViewerComponent,
   ],
   providers: [
     ProductListService,
