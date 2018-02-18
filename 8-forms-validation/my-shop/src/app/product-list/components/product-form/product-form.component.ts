@@ -17,4 +17,10 @@ export class ProductFormComponent {
     ngOnInit() {
 
     }
+
+    toggleInStock(inStock: boolean) {
+        if (inStock) {
+            this.detail.lastRenewed = Date.now();
+        }
+    }
 }
