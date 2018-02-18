@@ -9,6 +9,7 @@ import { ProductViewerComponent } from './containers/product-viewer/product-view
 
 import { ProductDetailComponent } from './components/product-detail/product-detail.component';
 import { ProductCountComponent } from './components/product-count/product-count.component';
+import { ProductFormComponent } from './components/product-form/product-form.component';
 
 import { ProductListService } from './product-list.service';
 
@@ -18,6 +19,7 @@ import { ProductListService } from './product-list.service';
     ProductViewerComponent,
     ProductDetailComponent,
     ProductCountComponent,
+    ProductFormComponent,
   ],
   imports: [
     BrowserModule,
@@ -26,7 +28,7 @@ import { ProductListService } from './product-list.service';
   ],
   exports: [
   // ProductListComponent,
-    ProductViewerComponent,
+    ProductViewerComponent
   ],
   providers: [
     ProductListService,
