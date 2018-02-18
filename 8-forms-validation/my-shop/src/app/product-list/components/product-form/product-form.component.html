@@ -6,7 +6,15 @@
         <input
             type="text"
             name="name"
-            ngModel
+            [ngModel]="detail?.name"
+        />
+    </div>
+    <div>
+        Product id:
+        <input
+            type="number"
+            name="id"
+            [ngModel]="detail?.id"
         />
     </div>
     {{ form.value | json }}    
