@@ -1,6 +1,13 @@
-<div>
+<form #form="ngForm" novalidate>
     Form
+    {{ detail | json}}
     <div>
-        {{ detail | json}}
+        Product name:
+        <input
+            type="text"
+            name="name"
+            ngModel
+        />
     </div>
-</div>
+    {{ form.value | json }}    
+</form>
