@@ -25,4 +25,8 @@ export class ProductFormComponent {
             this.detail.quantity = 0;
         }
     }
+
+    restockProduct(quantity: number) {
+        this.detail.quantity = quantity;
+    }
 }

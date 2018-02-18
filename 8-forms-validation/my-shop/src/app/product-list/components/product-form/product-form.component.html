@@ -38,12 +38,13 @@
             />
             No
         </label>
-        <div>
+        <div *ngIf="form.value.inStock">
             Product quantity:
             <input
                 type="number"
                 name="quantity"
                 [ngModel]="detail?.quantity"
+                (ngModelChange)="restockProduct($event)"
             />
         </div>
     </div>
