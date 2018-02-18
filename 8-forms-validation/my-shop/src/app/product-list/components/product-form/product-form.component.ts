@@ -21,6 +21,8 @@ export class ProductFormComponent {
     toggleInStock(inStock: boolean) {
         if (inStock) {
             this.detail.lastRenewed = Date.now();
+        } else {
+            this.detail.quantity = 0;
         }
     }
 }

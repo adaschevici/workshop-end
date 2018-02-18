@@ -38,6 +38,14 @@
             />
             No
         </label>
+        <div>
+            Product quantity:
+            <input
+                type="number"
+                name="quantity"
+                [ngModel]="detail?.quantity"
+            />
+        </div>
     </div>
     <div *ngIf="form.value.inStock">
         Renewed date:
