@@ -10,7 +10,9 @@
             #name="ngModel"
             [ngModel]="detail?.name"
         />
-        {{ name.errors | json }}
+        <div *ngIf="name.errors?.required && name.dirty" class="error">
+          Passenger name is required.
+        </div>
     </div>
     <div>
         Product id:
@@ -21,7 +23,9 @@
             #id="ngModel"
             [ngModel]="detail?.id"
         />
-        {{ id.errors | json }}
+        <div *ngIf="id.errors?.required && id.dirty" class="error">
+          Passenger ID is required.
+        </div>
     </div>
     <div>
         <label>
