@@ -1,6 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
 
 import { Product } from '../../models/product.interface';
+import { Provider } from '../../models/providers.interface';
 
 @Component({
     selector: 'app-product-form',
@@ -8,10 +9,23 @@ import { Product } from '../../models/product.interface';
     templateUrl: './product-form.component.html'
 })
 export class ProductFormComponent {
-    
+
     @Input()
     detail: Product;
 
+    providers: Provider[] = [{
+      key: 'none',
+      value: 'No provider',
+    }, {
+      key: 'star-shop',
+      value: 'Star Shop',
+    }, {
+      key: 'rainbow-shop',
+      value: 'Rainbow Shop',
+    }, {
+      key: 'unicorn-shop',
+      value: 'Unicorn Shop',
+    }];
     constructor() {}
 
     ngOnInit() {

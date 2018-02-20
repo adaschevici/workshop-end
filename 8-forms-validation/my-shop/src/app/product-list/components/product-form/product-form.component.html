@@ -45,5 +45,19 @@
             [ngModel]="detail?.lastRenewed"
         />
     </div>
-    {{ form.value | json }}    
+    <div>
+      Providers:
+      <select
+          name="providers"
+          [ngModel]="detail?.providers"
+        >
+        <option
+          *ngFor="let item of providers"
+          [value]="item.key"
+        >
+          {{ item.value }}
+        </option>
+      </select>
+    </div>
+    {{ form.value | json }}
 </form>
