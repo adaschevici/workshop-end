@@ -59,6 +59,17 @@
           {{ item.value }}
         </option>
       </select>
+      <select
+          name="provider"
+          [ngModel]="detail?.provider"
+        >
+        <option
+          *ngFor="let item of providers"
+          [ngValue]="item.key"
+        >
+          {{ item.value }}
+        </option>
+      </select>
     </div>
     {{ form.value | json }}
 </form>
