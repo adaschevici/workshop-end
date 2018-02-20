@@ -6,16 +6,22 @@
         <input
             type="text"
             name="name"
+            required
+            #name="ngModel"
             [ngModel]="detail?.name"
         />
+        {{ name.errors | json }}
     </div>
     <div>
         Product id:
         <input
             type="number"
             name="id"
+            required
+            #id="ngModel"
             [ngModel]="detail?.id"
         />
+        {{ id.errors | json }}
     </div>
     <div>
         <label>
