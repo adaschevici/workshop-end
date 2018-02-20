@@ -48,12 +48,13 @@
     <div>
       Providers:
       <select
-          name="providers"
-          [ngModel]="detail?.providers"
+          name="provider"
+          [ngModel]="detail?.provider"
         >
         <option
           *ngFor="let item of providers"
           [value]="item.key"
+          [selected]="item.key === detail?.provider"
         >
           {{ item.value }}
         </option>
