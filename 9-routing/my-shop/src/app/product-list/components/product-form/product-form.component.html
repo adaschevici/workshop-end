@@ -1,0 +1,86 @@
+<form (ngSubmit)="handleSubmit(form.value, form.valid)" #form="ngForm" novalidate>
+    Form
+    <div>
+        Product name:
+        <input
+            type="text"
+            name="name"
+            required
+            #name="ngModel"
+            [ngModel]="detail?.name"
+        />
+        <div *ngIf="name.errors?.required && name.dirty" class="error">
+          Passenger name is required.
+        </div>
+    </div>
+    <div>
+        Product id:
+        <input
+            type="number"
+            name="id"
+            required
+            minlength="2"
+            #id="ngModel"
+            [ngModel]="detail?.id"
+        />
+        <div *ngIf="id.errors?.minlength && id.touched" class="error">
+          {{ id.errors | json }}
+          Passenger ID is required.
+        </div>
+    </div>
+    <div>
+        <label>
+            <input
+                type="checkbox"
+                name="inStock"
+                [ngModel]="detail?.inStock"
+                (ngModelChange)="toggleInStock($event)"
+            />
+            {{ detail?.inStock ? "Yes" : "No" }}
+        </label>
+        <div *ngIf="form.value.inStock">
+            Product quantity:
+            <input
+                type="number"
+                name="quantity"
+                [ngModel]="detail?.quantity"
+                (ngModelChange)="restockProduct($event)"
+            />
+        </div>
+    </div>
+    <div *ngIf="form.value.inStock">
+        Renewed date:
+        <input
+            type="number"
+            name="lastRenewed"
+            [ngModel]="detail?.lastRenewed"
+        />
+    </div>
+    <div>
+      Providers:
+      <select
+          name="provider"
+          [ngModel]="detail?.provider"
+        >
+        <option
+          *ngFor="let item of providers"
+          [value]="item.key"
+          [selected]="item.key === detail?.provider"
+        >
+          {{ item.value }}
+        </option>
+      </select>
+      <select
+          name="provider"
+          [ngModel]="detail?.provider"
+        >
+        <option
+          *ngFor="let item of providers"
+          [ngValue]="item.key"
+        >
+          {{ item.value }}
+        </option>
+      </select>
+    </div>
+    <button type="submit" [disabled]="form.invalid">Update Product</button>
+</form>
