@@ -1,4 +1,7 @@
 <div>
+  <button (click)="goBack()">
+    &lsaquo; Go Back to Product List
+  </button>
   <app-product-form
     [detail]="product"
     (update)="onUpdateProduct($event)"

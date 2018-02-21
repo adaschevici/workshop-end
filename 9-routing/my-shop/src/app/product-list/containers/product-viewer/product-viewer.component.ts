@@ -37,4 +37,8 @@ export class ProductViewerComponent implements OnInit {
         this.product = Object.assign({}, this.product, event);
       })
   }
+
+  goBack() {
+    this.router.navigate(['/products']);
+  }
 }
