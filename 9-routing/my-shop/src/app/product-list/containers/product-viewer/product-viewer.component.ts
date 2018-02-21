@@ -23,10 +23,11 @@ export class ProductViewerComponent implements OnInit {
 
   ngOnInit() {
     this.route.params
-      .switchMap((data: Params) => {
+      .switchMap((data: Product) => {
         console.log(data);
-        return this.productListService.getProduct(data.id); // this will error out
-      });
+        return this.productListService.getProduct(data.id);
+      })
+      .subscribe((data: Product) => this.product = data);
   }
 
   onUpdateProduct(event: Product) {
