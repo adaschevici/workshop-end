@@ -21,7 +21,10 @@ import { ProductListService } from './product-list.service';
 const routes = [
   {
     path: 'products',
-    component: ProductListComponent,
+    children: [
+      { path: '', component: ProductListComponent },
+      { path: ':id', component: ProductViewerComponent },
+    ],
   }
 ];
 @NgModule({
