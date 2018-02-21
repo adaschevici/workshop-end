@@ -5,7 +5,8 @@ import { Component } from '@angular/core';
     selector: 'not-found',
     template: `
         <div>
-            Oops, these are not the droids you are looking for!
+            Oops, these are not the droids you are looking for,
+            go <a routerLink="/">home</a>?
         </div>
     `
 })
