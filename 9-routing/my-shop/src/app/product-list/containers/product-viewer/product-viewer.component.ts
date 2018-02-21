@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import 'rxjs/add/operator/switchMap';
 
 import { ProductListService } from '../../product-list.service';
 
@@ -22,12 +23,10 @@ export class ProductViewerComponent implements OnInit {
 
   ngOnInit() {
     this.route.params
-      .subscribe((data: Params) => {
+      .switchMap((data: Params) => {
         console.log(data);
-      })
-    this.productListService
-      .getProduct(1)
-      .subscribe((data: Product) => this.product = data);
+        return this.productListService.getProduct(data.id); // this will error out
+      });
   }
 
   onUpdateProduct(event: Product) {
