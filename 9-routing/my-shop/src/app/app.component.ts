@@ -15,12 +15,12 @@ export class AppComponent {
       name: 'Home',
       exact: true,
     }, {
-      link: '/oops',
-      name: '404',
-      exact: false,
-    }, {
       link: '/products',
       name: 'Products',
+      exact: false,
+    }, {
+      link: '/oops',
+      name: '404',
       exact: false,
     }
   ]
