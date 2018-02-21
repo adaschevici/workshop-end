@@ -4,6 +4,7 @@ import { Product } from '../../models/product.interface';
 import { ProductListService } from '../../product-list.service';
 
 import uppercase from '../../../../utils/filters';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-product-list',
@@ -15,7 +16,10 @@ export class ProductListComponent implements OnInit {
   products: Product[];
   product: string;
 
-  constructor(private productService: ProductListService) {
+  constructor(
+    private router: Router,
+    private productService: ProductListService
+  ) {
   }
 
   handleChange(value: string) {
@@ -37,7 +41,7 @@ export class ProductListComponent implements OnInit {
       });
   }
 
-  handleRemove(event: any) {
+  handleRemove(event: Product) {
     console.log(event);
     this.productService
       .removeProduct(event)
@@ -61,6 +65,10 @@ export class ProductListComponent implements OnInit {
           return product;
         });
       });
+  }
+
+  handleView(event: Product) {
+    this.router.navigate(['/products', event.id])
   }
 
   handleBTCFetch(event: any) {

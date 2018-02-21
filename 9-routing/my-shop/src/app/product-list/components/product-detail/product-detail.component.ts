@@ -12,10 +12,13 @@ export class ProductDetailComponent implements OnInit, OnChanges {
   detail: Product;
 
   @Output()
-  remove: EventEmitter<any> = new EventEmitter();
+  remove: EventEmitter<Product> = new EventEmitter<Product>();
 
   @Output()
-  edit: EventEmitter<any> = new EventEmitter();
+  edit: EventEmitter<Product> = new EventEmitter<Product>();
+
+  @Output()
+  view: EventEmitter<Product> = new EventEmitter<Product>();
 
   editing: boolean = false;
 
@@ -36,6 +39,10 @@ export class ProductDetailComponent implements OnInit, OnChanges {
     console.log(this.detail);
   }
 
+  goToProduct() {
+    this.view.emit(this.detail);
+  }
+  
   toggleEdit() {
     if (this.editing) {
       this.edit.emit(this.detail);
