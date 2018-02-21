@@ -4,18 +4,13 @@
     Welcome to {{ title }}!
   </h1>
   <nav class="nav">
-    <a 
-      routerLink="/"
-      routerLinkActive="active"
-      [routerLinkActiveOptions]="{ exact: true }"
-    >
-      Home
-    </a>
     <a
-      routerLink="/oops"
+      *ngFor="let item of nav" 
+      [routerLink]="item.link"
       routerLinkActive="active"
+      [routerLinkActiveOptions]="{ exact: item.exact }"
     >
-      404
+      {{ item.name }}
     </a>
   </nav>
   <router-outlet></router-outlet>
