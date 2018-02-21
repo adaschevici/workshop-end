@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, OnInit, Output, EventEmitter } from '@angular/core';
 
 import { Product } from '../../models/product.interface';
 import { Provider } from '../../models/providers.interface';
@@ -12,6 +12,9 @@ export class ProductFormComponent {
 
     @Input()
     detail: Product;
+
+    @Output()
+    update: EventEmitter<any> = new EventEmitter();
 
     providers: Provider[] = [{
       key: 'none',
@@ -43,5 +46,11 @@ export class ProductFormComponent {
 
     restockProduct(quantity: number) {
         this.detail.quantity = quantity;
+    }
+
+    handleSubmit(product: Product, isValid: boolean) {
+        if (isValid) {
+
+        }
     }
 }

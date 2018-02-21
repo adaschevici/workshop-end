@@ -1,4 +1,4 @@
-<form #form="ngForm" novalidate>
+<form (ngSubmit)="handleSubmit(form.value, form.valid)" #form="ngForm" novalidate>
     Form
     <div>
         Product name:
@@ -82,4 +82,5 @@
         </option>
       </select>
     </div>
+    <button type="submit" [disabled]="form.invalid">Update Product</button>
 </form>
