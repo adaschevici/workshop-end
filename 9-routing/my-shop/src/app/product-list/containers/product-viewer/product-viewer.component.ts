@@ -23,7 +23,7 @@ export class ProductViewerComponent implements OnInit {
 
   ngOnInit() {
     this.route.params
-      .switchMap((data: Product) => {
+      .switchMap((data: Product) => { // switchmap is used to chain and change observables
         console.log(data);
         return this.productListService.getProduct(data.id);
       })
