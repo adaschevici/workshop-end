@@ -21,4 +21,7 @@ export class ProductViewerComponent implements OnInit {
       .subscribe((data: Product) => this.product = data);
   }
 
+  onUpdateProduct(event: Product) {
+    console.log(event);
+  }
 }

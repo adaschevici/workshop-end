@@ -14,7 +14,7 @@ export class ProductFormComponent {
     detail: Product;
 
     @Output()
-    update: EventEmitter<any> = new EventEmitter();
+    update: EventEmitter<Product> = new EventEmitter<Product>();
 
     providers: Provider[] = [{
       key: 'none',
@@ -50,7 +50,7 @@ export class ProductFormComponent {
 
     handleSubmit(product: Product, isValid: boolean) {
         if (isValid) {
-
+            this.update.emit();
         }
     }
 }
