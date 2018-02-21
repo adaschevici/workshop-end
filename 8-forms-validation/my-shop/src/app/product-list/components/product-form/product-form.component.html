@@ -1,6 +1,5 @@
 <form #form="ngForm" novalidate>
     Form
-    {{ detail | json}}
     <div>
         Product name:
         <input
@@ -83,7 +82,4 @@
         </option>
       </select>
     </div>
-    <div>{{ form.value | json }}</div>
-    <div>Valid: {{ form.valid | json }}</div>
-    <div>Invalid:: {{ form.invalid | json }}</div>
 </form>
