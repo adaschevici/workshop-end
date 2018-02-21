@@ -48,9 +48,10 @@ input[type=number] {
 }
 button {
   cursor: pointer;
+  margin-left: 5px;
+  border-radius: 15px;
   background: #9f72e6;
   border: 0;
-  border-radius: 2px;
   padding: 5px 10px;
   text-align: center;
   color: #fff;
