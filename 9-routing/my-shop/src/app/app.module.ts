@@ -11,7 +11,7 @@ import { NotFoundComponent } from './not-found.component';
 import { ProductListModule } from './product-list/product-list.module';
 
 const routes: Routes = [
-  { path: '', component: HomeComponent, pathMatch: 'full' },
+  { path: '', redirectTo: 'products', pathMatch: 'full' },
   { path: '**', component: NotFoundComponent, pathMatch: 'full' },
 ]
 
