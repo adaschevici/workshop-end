@@ -25,7 +25,9 @@ const routes: Routes = [
     BrowserModule,
     FormsModule,
     ProductListModule,
-    RouterModule.forRoot(routes),
+    RouterModule.forRoot(routes, { useHash: true }), // for supporting older browsers
+    // prevents benefits of server side rendering
+    // based on pushLocation based strategy
   ],
   providers: [],
   bootstrap: [AppComponent]
