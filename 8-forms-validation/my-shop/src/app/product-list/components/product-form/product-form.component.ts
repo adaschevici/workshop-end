@@ -50,7 +50,7 @@ export class ProductFormComponent {
 
     handleSubmit(product: Product, isValid: boolean) {
         if (isValid) {
-            this.update.emit();
+            this.update.emit(product);
         }
     }
 }

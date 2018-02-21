@@ -22,6 +22,10 @@ export class ProductViewerComponent implements OnInit {
   }
 
   onUpdateProduct(event: Product) {
-    console.log(event);
+    this.productListService
+      .updateProduct(event)
+      .subscribe((data: Product) => {
+        this.product = Object.assign({}, this.product, event);
+      })
   }
 }
