@@ -18,10 +18,6 @@ export class AppComponent {
       link: '/oops',
       name: '404',
       exact: false,
-    }, {
-      link: '/products',
-      name: 'Shop',
-      exact: false,
     }
   ]
 
