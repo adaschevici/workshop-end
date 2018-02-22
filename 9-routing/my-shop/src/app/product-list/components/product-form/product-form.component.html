@@ -10,7 +10,7 @@
             [ngModel]="detail?.name"
         />
         <div *ngIf="name.errors?.required && name.dirty" class="error">
-          Passenger name is required.
+          Product name is required.
         </div>
     </div>
     <div>
@@ -25,7 +25,7 @@
         />
         <div *ngIf="id.errors?.minlength && id.touched" class="error">
           {{ id.errors | json }}
-          Passenger ID is required.
+          Product ID is required.
         </div>
     </div>
     <div>
