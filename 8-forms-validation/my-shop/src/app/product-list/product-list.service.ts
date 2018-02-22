@@ -5,7 +5,6 @@ import { Observable } from 'rxjs/Observable';
 import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/catch';
 import 'rxjs/add/observable/throw';
-import 'rxjs/add/operator/toPromise';
 
 import { Product } from './models/product.interface';
 
@@ -18,11 +17,10 @@ export class ProductListService {
     console.log(this.http);
   }
 
-  getProducts(): Promise<Product[]> {
+  getProducts(): Observable<Product[]> {
     return this.http
       .get(PRODUCT_API)
-      .toPromise()
-      .then((response: Response) => response.json());
+      .map((response: Response) => response.json());
   }
 
   getProduct(id: number): Observable<Product> {
