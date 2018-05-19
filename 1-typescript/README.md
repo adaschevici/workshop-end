@@ -16,3 +16,22 @@ npm install -g typescript
 # test your install
 tsc –v
 ```
+* Create a `hello.ts` file
+
+* Transpile your code
+```bash
+# with default options
+tsc hello.ts
+
+# you can also watch a file for changes
+tsc -w hello.ts
+
+# what about configuring transpile code outputs
+tsc -t ES6 -w hello.ts
+
+# and create a folder config
+tsc --init
+
+# and wtch the entire folder
+tsc -w
+```
