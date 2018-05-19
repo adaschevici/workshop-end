@@ -245,3 +245,48 @@ for (let entry of set2) {
   console.log(entry);
 }
 ```
+
+#### Asynchronous programming
+
+Asynchronous programming is really important expecially on the client
+
+```javascript
+function doAsyncTask(cb) {
+  setTimeout(() => {
+    console.log("Async Task Calling Callback");
+    cb();
+  }, 1000);
+}
+
+doAsyncTask(() => console.log("Callback Called")); // this will get called and then after one second the callback will be triggered
+
+let error = false;
+function doAsyncTask() {
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      if (error) {
+        reject('error');
+      } else {
+        resolve('done');
+      }
+    }, 1000);
+  });
+}
+
+doAsyncTask().then(
+  (val) => console.log(val), // this is the resolve function
+  (err) => console.error(err) // this is the reject function
+);
+
+// Immediately Resolved Promise
+let promise = Promise.resolve('done');
+promise.then((val) => console.log(val)); // 'done'
+
+// Handling Errors and chaining Promises
+Promise.resolve('done')
+  .then((val) => {throw new Error("fail")})
+  .then((val) => console.log(val))
+  .catch((err) => console.error(err));
+```
+
+
